@@ -31,23 +31,31 @@ cd java-starter-buttercms
 
 To fetch your ButterCMS content, add your API token as an environment variable.
 
-`$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env`
+```bash
+$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
+```
 
 ### 3. Build the project
 
 Build the project with the following command
 
-`$ mvn install`
+```bash
+$ mvn install
+```
 
 ### 4. Run the project
 
 To view the app in the browser, you'll need to run the local development server:
 
-`$ mvn spring-boot:run`
+```
+$ mvn spring-boot:run
+```
 
 Alternatively, you can run it directly via the `java` command
 
-`$ java -jar target/spring-starter-buttercms-*.jar`
+```bash
+$ java -jar target/spring-starter-buttercms-*.jar
+```
 
 where the file name `spring-starter-buttercms` will be appended by the value of the version tag `<version>` in [pom.xml](pom.xml)
 
