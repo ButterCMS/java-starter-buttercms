@@ -47,7 +47,7 @@ $ mvn install
 
 To view the app in the browser, you'll need to run the local development server:
 
-```
+```bash
 $ mvn spring-boot:run
 ```
 
