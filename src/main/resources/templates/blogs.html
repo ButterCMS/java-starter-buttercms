@@ -44,7 +44,7 @@
 
 
 <!-- ========================= header start ========================= -->
-<div th:insert="fragments/common-elements/header :: header"></div>
+<div th:insert="~{fragments/common-elements/header :: header}"></div>
 <!-- ========================= header end ========================= -->
 
 <!-- ========================= blog-roll section start ========================= -->
@@ -52,7 +52,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div th:insert="fragments/blog/breadcrumb-menu"></div>
+                <div th:insert="~{fragments/blog/breadcrumb-menu}"></div>
             </div>
         </div>
     </div>
@@ -65,14 +65,14 @@
                 <div class="row"><!--nested row for blogroll-->
                     <div th:if="${posts.isEmpty()}">No blog posts found matching this query.</div>
                     <div th:each="post : ${posts}" class="col-12 col-lg-6">
-                        <div th:insert="fragments/blog/post-preview"></div>
+                        <div th:insert="~{fragments/blog/post-preview}"></div>
                     </div>
                 </div>
             </div>
             <!-- Widgets Column -->
             <aside class="col-12 col-lg-4">
-                <div th:insert="fragments/blog/search"></div>
-                <div th:insert="fragments/blog/categories"></div>
+                <div th:insert="~{fragments/blog/search}"></div>
+                <div th:insert="~{fragments/blog/categories}"></div>
             </aside>
         </div>
     </div>
@@ -80,7 +80,7 @@
 <!-- ========================= blog-section end ========================= -->
 
 <!-- ========================= footer start ========================= -->
-<div th:insert="fragments/common-elements/footer :: footer"></div>
+<div th:insert="~{fragments/common-elements/footer :: footer}"></div>
 <!-- ========================= footer end ========================= -->
 
 

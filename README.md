@@ -1,4 +1,4 @@
-![Java version](https://img.shields.io/badge/Java-8-red)
+![Java version](https://img.shields.io/badge/Java-17-red)
 
 # Java Spring Boot +  ButterCMS Starter Project
 
@@ -18,7 +18,7 @@ to deploy your own copy of our starter project to the provider of your  choice.
 
 ### Prerequisites
 
-This project requires Java 8 and Maven. All other dependencies (Spring Boot, Java SDK for ButterCMS) are automatically managed by Maven.
+This project requires Java 17 and Maven. All other dependencies (Spring Boot, Java SDK for ButterCMS) are automatically managed by Maven.
 
 To get started, clone and cd into the repo.
 
@@ -31,23 +31,30 @@ cd java-starter-buttercms
 
 To fetch your ButterCMS content, add your API token as an environment variable.
 
-`$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env`
+```bash
+$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env`
+```
 
 ### 3. Build the project
 
 Build the project with the following command
 
-`$ mvn install`
+```bash
+$ mvn install
+```
 
 ### 4. Run the project
 
 To view the app in the browser, you'll need to run the local development server:
 
-`$ mvn spring-boot:run`
-
+```bash
+$ mvn spring-boot:run
+```
 Alternatively, you can run it directly via the `java` command
 
-`$ java -jar target/spring-starter-buttercms-*.jar`
+```bash
+$ java -jar target/spring-starter-buttercms-*.jar
+```
 
 where the file name `spring-starter-buttercms` will be appended by the value of the version tag `<version>` in [pom.xml](pom.xml)
 
