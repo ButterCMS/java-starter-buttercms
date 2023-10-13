@@ -15,7 +15,7 @@ public class BlogController {
         this.blogService = blogService;
     }
 
-    @GetMapping("/blog/")
+    @GetMapping(value = { "/blog", "/blog/" })
     public String blogs(Model model) {
         BlogsDto blogsDto = blogService.getBlogs();
         model.addAttribute("posts", blogsDto.getPosts());
@@ -26,7 +26,7 @@ public class BlogController {
         return "blogs";
     }
 
-    @GetMapping("/blog/{slug}")
+    @GetMapping(value = { "/blog/{slug}", "/blog/{slug}/" })
     public String blogById(@PathVariable String slug, Model model) {
         BlogsDto blogsDto = blogService.getBlogsBySlug(slug);
         model.addAttribute("post", blogsDto.getPosts().get(0));
@@ -38,7 +38,7 @@ public class BlogController {
         return "blog-post";
     }
 
-    @GetMapping("/blog/category/{categorySlug}")
+    @GetMapping(value = { "/blog/category/{categorySlug}", "/blog/category/{categorySlug}/" })
     public String blogByCategory(@PathVariable String categorySlug, Model model) {
         BlogsDto blogsDto = blogService.getBlogsByCategory(categorySlug);
         model.addAttribute("posts", blogsDto.getPosts());
@@ -51,7 +51,7 @@ public class BlogController {
         return "blogs";
     }
 
-    @GetMapping("/blog/tag/{tagSlug}")
+    @GetMapping(value = { "/blog/tag/{tagSlug}", "/blog/tag/{tagSlug}/" })
     public String blogByTag(@PathVariable String tagSlug, Model model) {
         BlogsDto blogsDto = blogService.getBlogsByTag(tagSlug);
         model.addAttribute("posts", blogsDto.getPosts());
@@ -64,7 +64,7 @@ public class BlogController {
         return "blogs";
     }
 
-    @GetMapping(value = "/blog/search")
+    @GetMapping(value = { "/blog/search", "/blog/search/" })
     public String search(@RequestParam(name = "q", required = false, defaultValue = "") String searchTerm, Model model) {
         BlogsDto blogsDto = blogService.searchBlogs(searchTerm);
         model.addAttribute("posts", blogsDto.getPosts());

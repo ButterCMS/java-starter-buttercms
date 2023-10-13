@@ -1,18 +1,12 @@
 package com.buttercms.springstarterbuttercms.controller;
 
 import com.buttercms.springstarterbuttercms.controller.dto.LandingPageDto;
-import com.buttercms.springstarterbuttercms.model.landingpage.Field;
-import com.buttercms.springstarterbuttercms.model.landingpage.Fields;
-import com.buttercms.springstarterbuttercms.model.landingpage.Section;
 import com.buttercms.springstarterbuttercms.model.landingpage.Seo;
 import com.buttercms.springstarterbuttercms.service.PageCollectionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.List;
-
 
 @Controller
 public class IndexController {
@@ -22,7 +16,7 @@ public class IndexController {
         this.pageCollectionService = pageCollectionService;
     }
 
-    @GetMapping(value =  {"/","/landing-page/{slug}"})
+    @GetMapping(value =  {"/", "/landing-page/{slug}", "/landing-page/{slug}/"})
     public String index(@PathVariable(required = false) String slug, Model model) {
         LandingPageDto landingPage = pageCollectionService.getLandingPage("landing-page", slug);
         Seo seo = landingPage.getFields().getSeo();
