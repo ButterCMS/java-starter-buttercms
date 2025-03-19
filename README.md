@@ -48,7 +48,7 @@ cd java-starter-buttercms
 To fetch your ButterCMS content, add your API token as an environment variable.
 
 ```bash
-$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env`
+$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
 ```
 
 ### 3. Build the project
