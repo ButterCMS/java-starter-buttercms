@@ -32,7 +32,7 @@ sudo apt install maven
 ```bash
 # Using Homebrew
 brew install --cask temurin@17
-# Using Homebrew
+# Install Maven
 brew install maven
 ```
 
