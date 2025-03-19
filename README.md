@@ -31,8 +31,7 @@ sudo apt install maven
 #### Installing Java 17 and Maven on macOS
 ```bash
 # Using Homebrew
-brew tap homebrew/cask-versions
-brew install --cask temurin17
+brew install --cask temurin@17
 # Using Homebrew
 brew install maven
 ```
