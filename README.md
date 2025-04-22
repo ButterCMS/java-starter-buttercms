@@ -1,4 +1,4 @@
-![Java version](https://img.shields.io/badge/Java-17-red)
+![Java version](https://img.shields.io/badge/Java-17-red) ![Version](https://img.shields.io/badge/Version-1.3.0-blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-green)
 
 # Java Spring Boot +  ButterCMS Starter Project
 
@@ -20,9 +20,25 @@ to deploy your own copy of our starter project to the provider of your  choice.
 
 This project requires Java 17 and Maven. All other dependencies (Spring Boot, Java SDK for ButterCMS) are automatically managed by Maven.
 
+#### Installing Java 17 and Maven on Ubuntu
+```bash
+# Update package list and install OpenJDK 17
+sudo apt update && sudo apt install openjdk-17-jdk
+# Install Maven
+sudo apt install maven
+```
+
+#### Installing Java 17 and Maven on macOS
+```bash
+# Using Homebrew
+brew install --cask temurin@17
+# Install Maven
+brew install maven
+```
+
 To get started, clone and cd into the repo.
 
-```
+```bash
 git clone https://github.com/ButterCMS/java-starter-buttercms.git
 cd java-starter-buttercms
 ```
@@ -32,7 +48,7 @@ cd java-starter-buttercms
 To fetch your ButterCMS content, add your API token as an environment variable.
 
 ```bash
-$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env`
+$ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
 ```
 
 ### 3. Build the project
