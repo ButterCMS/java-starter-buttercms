@@ -56,7 +56,7 @@ $ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
 Build the project with the following command
 
 ```bash
-$ mvn install
+$ mvn install -DskipTests
 ```
 
 ### 4. Run the project
