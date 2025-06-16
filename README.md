@@ -36,6 +36,9 @@ brew install --cask temurin@17
 brew install maven
 ```
 
+#### Installing Java 17 and Maven on Windows
+Windows users can install Java from the official site. Make sure to set the `JAVA_HOME` environment variable after installation.
+
 To get started, clone and cd into the repo.
 
 ```bash
@@ -56,7 +59,7 @@ $ echo 'JAVA_BUTTER_CMS_API_KEY=<Your API Token>' >> .env
 Build the project with the following command
 
 ```bash
-$ mvn install
+$ mvn install -DskipTests
 ```
 
 ### 4. Run the project
