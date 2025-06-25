@@ -100,4 +100,22 @@ public class BlogsDto {
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
+    public static class Builder {
+        private BlogsDto dto = new BlogsDto();
+        
+        public Builder posts(List<Post> posts) {
+            dto.setPosts(posts);
+            return this;
+        }
+        
+        public Builder categories(List<Category> categories) {
+            dto.setCategories(categories);
+            return this;
+        }
+        
+        public BlogsDto build() {
+            return dto;
+        }
+    }
 }

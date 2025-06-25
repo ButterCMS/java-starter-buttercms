@@ -49,9 +49,7 @@ public class BlogService {
     }
 
     public BlogsDto getBlogsByCategory(String categorySlug) {
-        Map<String, String> queryParams = new HashMap<String, String>() {{
-            put("category_slug", categorySlug);
-        }};
+        Map<String, String> queryParams = Map.of("category_slug", categorySlug);
         List<Post> posts = butterCMSClient.getPosts(queryParams).getData();
         Category category = butterCMSClient.getCategory(categorySlug, Collections.emptyMap()).getData();
         List<Category> categories = butterCMSClient.getCategories(Collections.emptyMap()).getData();
@@ -67,9 +65,7 @@ public class BlogService {
     }
 
     public BlogsDto getBlogsByTag(String tagSlug) {
-        Map<String, String> queryParams = new HashMap<String, String>() {{
-            put("tag_slug", tagSlug);
-        }};
+        Map<String, String> queryParams = Map.of("tag_slug", tagSlug);
         List<Post> posts = butterCMSClient.getPosts(queryParams).getData();
         Tag tag = butterCMSClient.getTag(tagSlug, Collections.emptyMap()).getData();
         List<Category> categories = butterCMSClient.getCategories(Collections.emptyMap()).getData();
@@ -86,9 +82,7 @@ public class BlogService {
     }
 
     public BlogsDto searchBlogs(String searchTerm) {
-        Map<String, String> queryParams = new HashMap<String, String>() {{
-            put("query", searchTerm);
-        }};
+        Map<String, String> queryParams = Map.of("query", searchTerm);
         List<Post> posts = butterCMSClient.getSearchPosts(queryParams).getData();
         List<Category> categories = butterCMSClient.getCategories(Collections.emptyMap()).getData();
         BlogsDto dto = new BlogsDto();

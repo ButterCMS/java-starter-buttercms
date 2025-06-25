@@ -24,6 +24,7 @@ public class PageCollectionService {
 
     public LandingPageDto getLandingPage(String pageType, String slug) {
         slug = slug == null ? DEFAULT_LANDING_PAGE : slug;
+        // TODO: how to change this?
         Map<String, String> queryParams = new HashMap<String, String>() {{
             put("page", "1");
             put("page_size", "2");
