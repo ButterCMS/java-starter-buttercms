@@ -1,4 +1,4 @@
-![Java version](https://img.shields.io/badge/Java-17-red) ![Version](https://img.shields.io/badge/Version-1.3.0-blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-green)
+![Java version](https://img.shields.io/badge/Java-21-red) ![Version](https://img.shields.io/badge/Version-1.3.0-blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.3-green)
 
 # Java Spring Boot +  ButterCMS Starter Project
 
@@ -18,25 +18,25 @@ to deploy your own copy of our starter project to the provider of your  choice.
 
 ### Prerequisites
 
-This project requires Java 17 and Maven. All other dependencies (Spring Boot, Java SDK for ButterCMS) are automatically managed by Maven.
+This project requires Java 21 and Maven. All other dependencies (Spring Boot, Java SDK for ButterCMS) are automatically managed by Maven.
 
-#### Installing Java 17 and Maven on Ubuntu
+#### Installing Java 21 and Maven on Ubuntu
 ```bash
-# Update package list and install OpenJDK 17
-sudo apt update && sudo apt install openjdk-17-jdk
+# Update package list and install OpenJDK 21
+sudo apt update && sudo apt install openjdk-21-jdk
 # Install Maven
 sudo apt install maven
 ```
 
-#### Installing Java 17 and Maven on macOS
+#### Installing Java 21 and Maven on macOS
 ```bash
 # Using Homebrew
-brew install --cask temurin@17
+brew install --cask temurin@21
 # Install Maven
 brew install maven
 ```
 
-#### Installing Java 17 and Maven on Windows
+#### Installing Java 21 and Maven on Windows
 Windows users can install Java from the official site. Make sure to set the `JAVA_HOME` environment variable after installation.
 
 To get started, clone and cd into the repo.
