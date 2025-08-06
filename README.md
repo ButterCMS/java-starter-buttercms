@@ -37,7 +37,7 @@ brew install maven
 ```
 
 #### Installing Java 17 and Maven on Windows
-Windows users can install Java from the official site. Make sure to set the `JAVA_HOME` environment variable after installation.
+Windows users can install Java from the official site. Make sure to set the `JAVA_HOME` environment variable after installation. To install Maven, follow the instructions on [the official Maven site.](https://maven.apache.org/install.html)
 
 To get started, clone and cd into the repo.
 
